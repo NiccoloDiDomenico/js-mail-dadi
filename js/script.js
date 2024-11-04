@@ -24,3 +24,31 @@ for (let i = 0; i < mailList.length; i++) {
         console.log(message);
     }
 }
+
+
+// DADI
+
+// ESECUZIONE LOGICA
+// - Genero due numeri random da 1 a 6;
+// - Uso un'istruzione condizionale per verificare quale numero è più alto e di conseguenza ha vinto;
+//     - se (numRandom1 > numRandom2) {
+//         giocatore 1 vince
+//     } altrimenti se (numRandom1 < numRandom2) {
+//         giocatore 2 vince
+//     } altrimenti {
+//         pareggio
+//     }
+
+const numRandom1 = Math.floor(Math.random() * 6) +1;
+const numRandom2 = Math.floor(Math.random() * 6) +1;
+console.log(numRandom1, numRandom2);
+if (numRandom1 > numRandom2) {
+    const message = `Il giocatore 1 ha vinto`
+    console.log(message);
+} else if (numRandom1 < numRandom2) {
+    const message = `Il giocatore 2 ha vinto`
+    console.log(message);
+} else {
+    const message = `Pareggio`
+    console.log(message);
+}
