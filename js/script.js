@@ -1,28 +1,45 @@
 // MAIL
 
+// DATO 
+// - Lista di email registrate
+// - Chiedere all'utente un email
+
 // ESECUZIONE LOGICA
-// - Creo una lista di mail che può accedere;
-// - Chiedo all'utente un email tramite un prompt;
-// - Creo un ciclo for per ogni elemento nella lista;
-//     - uso un'istruzione condizionale per verificare se la mail dell'utente è presente nella lista;
+// - Creo un ciclo for per ogni elemento "mail" nella lista;
+//     - uso un'istruzione condizionale per verificare se la mail dell'utente è presente nella lista:
 //         - se si {
-//             scrivo messaggio di conferma controllo
+//             login
 //         }
 //         - altrimenti {
-//             scrivo messaggio di errore 
+//             !login
 //         }
+
+// OUTPUT
+// Se il controllo è positivo {
+//     stampa "accesso consentito"
+// } else {
+//     stampa "accesso negato"
+// }
 
 const mailList = ["topolino@gmail.com", "minnie@gmail.com", "paperino@gmail.com", "paperina@gmail.com", "pluto@gmail.com"]
 const userMail = prompt("Inserisci la tua mail")
+
+let control = false
 for (let i = 0; i < mailList.length; i++) {
     const currMail = mailList[i];
-    if (userMail == currMail) {
-        const message = `La mail inserita è corretta`
-        console.log(message);
+    if (userMail === currMail) {
+        control = true;
+        break;
     } else {
-        const message = `La mail inserita non è corretta`
-        console.log(message);
+        
     }
+}
+console.log(control);
+
+if (control) {
+    console.log(`La tua mail è corretta`);
+} else {
+    console.log(`La tua mail non è corretta`);
 }
 
 
@@ -42,13 +59,15 @@ for (let i = 0; i < mailList.length; i++) {
 const numRandom1 = Math.floor(Math.random() * 6) +1;
 const numRandom2 = Math.floor(Math.random() * 6) +1;
 console.log(numRandom1, numRandom2);
+
+let message = "";
 if (numRandom1 > numRandom2) {
-    const message = `Il giocatore 1 ha vinto`
-    console.log(message);
+    message = `Il giocatore 1 ha vinto`
 } else if (numRandom1 < numRandom2) {
-    const message = `Il giocatore 2 ha vinto`
-    console.log(message);
+    message = `Il giocatore 2 ha vinto`
 } else {
-    const message = `Pareggio`
-    console.log(message);
+    message = `Pareggio`
 }
+
+console.log(message);
+
